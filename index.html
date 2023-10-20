@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap" rel="stylesheet">
+    <!-- for animation -->
+
+    <link href="
+    https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css
+    " rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- link Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- sliders code -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper main-mn-n-header-wrapper">
+      <!--================================ -->
+      <!--  Navbar code Start -->
+
+      <!-- ======================== -->
+      <header>
+        <div class="header-main-wrapepr">
+          <div class="wrapper header-wrapper">
+            <div class="logo-and-menus">
+              <!-- start web logo -->
+              <div class="web-logo">
+                <a
+                  href="#"
+                  class="custom-logo-link"
+                  rel="home"
+                  aria-current="page"
+                  ><img
+                    width="1200"
+                    height="200"
+                    src="./assets/images/banner.jpg"
+                    class="custom-logo"
+                    alt="E-School Demo"
+                    decoding="async"
+                    fetchpriority="high"
+                /></a>
+              </div>
+              <!-- end web logo -->
+              <div class="main-menu main-menu-top-wrapper-right-now">
+                <div class="web-menu-section">
+                  <div class="mobile-by-defult-header-wrapper">
+                    <div class="time-of-bd-wrapper">
+                      <p id="banglaDateasgdjhasgdh">
+                        শুক্রবার, ২০ অক্টোবর ২০২৩
+                      </p>
+                    </div>
+                    <div class="mobile-menu-close-and-open-button">
+                      <button id="main-menu-open-btn">
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
+                      <button id="main-menu-close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                // Define Bangla day names
+                const banglaDayNames = [
+                  "রবিবার",
+                  "সোমবার",
+                  "মঙ্গলবার",
+                  "বুধবার",
+                  "বৃহস্পতিবার",
+                  "শুক্রবার",
+                  "শনিবার",
+                ];
+
+                // Define Bangla month names
+                const banglaMonthNames = [
+                  "জানুয়ারি",
+                  "ফেব্রুয়ারি",
+                  "মার্চ",
+                  "এপ্রিল",
+                  "মে",
+                  "জুন",
+                  "জুলাই",
+                  "আগস্ট",
+                  "সেপ্টেম্বর",
+                  "অক্টোবর",
+                  "নভেম্বর",
+                  "ডিসেম্বর",
+                ];
+
+                // Function to convert English numbers to Bangla numbers
+                function convertToBanglaNumber(number) {
+                  const banglaNumbers = [
+                    "০",
+                    "১",
+                    "২",
+                    "৩",
+                    "৪",
+                    "৫",
+                    "৬",
+                    "৭",
+                    "৮",
+                    "৯",
+                  ];
+                  return number
+                    .toString()
+                    .split("")
+                    .map((char) => banglaNumbers[parseInt(char)])
+                    .join("");
+                }
+
+                // Function to get the current Bangla date
+                function getBanglaDate() {
+                  const now = new Date();
+                  const day = now.getDay(); // 0 for Sunday, 1 for Monday, etc.
+                  const date = convertToBanglaNumber(now.getDate());
+                  const month = banglaMonthNames[now.getMonth()];
+                  const year = convertToBanglaNumber(now.getFullYear());
+
+                  const banglaDayName = banglaDayNames[day];
+
+                  return `${banglaDayName}, ${date} ${month} ${year}`;
+                }
+
+                // Update the HTML element with the Bangla date
+                const banglaDateElement = document.getElementById(
+                  "banglaDateasgdjhasgdh"
+                );
+                if (banglaDateElement) {
+                  banglaDateElement.textContent = getBanglaDate();
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <!-- start main menu -->
+        <div class="out-of-wrapper-main-menu-jsgdjhf" id="navbar">
+          <div class="wrapper">
+            <!-- 				start out of wrapper menu -->
+            <div class="pc-extra-main-menu">
+              <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu">
+                  <li
+                    id="menu-item-28"
+                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-28"
+                  >
+                    <a href="#" aria-current="page"
+                      ><i class="fa-solid fa-house"></i> প্রচ্ছদ</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-44"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44"
+                  >
+                    <a>পরিচিতি</a>
+                    <ul class="sub-menu">
+                      <li
+                        id="menu-item-38"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"
+                      >
+                        <a href="#"
+                          >এক নজরে পরিচিতি</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    id="menu-item-45"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-45"
+                  >
+                    <a>জনবল</a>
+                    <ul class="sub-menu">
+                      <li
+                        id="menu-item-43"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
+                      >
+                        <a href="#"
+                          >শিক্ষক ও শিক্ষিকা</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-42"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"
+                      >
+                        <a href="#"
+                          >কর্মকর্তা</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    id="menu-item-46"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-46"
+                  >
+                    <a>শিক্ষার্থী</a>
+                    <ul class="sub-menu">
+                      <li
+                        id="menu-item-35"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"
+                      >
+                         <a href="#"
+                          >অধ্যায়নরত শিক্ষার্থীর তালিকা</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-39"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"
+                      >
+                         <a href="#"
+                          >ডিজিটাল হাজিরার তথ্য</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-40"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"
+                      >
+                        <a href="#"
+                          >আইডি কার্ড ডাউনলোড</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    id="menu-item-33"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"
+                  >
+                    <a href="#"
+                      >পরীক্ষার ফলাফল</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-31"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+                  >
+                    <a href="#"
+                      >ক্লাস রুটিন</a
+                    >
+                  </li>
+                  <li
+                    id="menu-item-34"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"
+                  >
+                    <a href="#">ছুটির দিন</a>
+                  </li>
+                  <li
+                    id="menu-item-47"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-47"
+                  >
+                    <a>ভর্তি আবেদন</a>
+                    <ul class="sub-menu">
+                      <li
+                        id="menu-item-41"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"
+                      >
+                        <a href="#"
+                          >অনলাইন ভর্তি আবেদন</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-48"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"
+                      >
+                         <a href="#"
+                          >ভর্তি পরীক্ষার ফর্ম</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-29"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"
+                      >
+                         <a href="#"
+                          >ভর্তি পরীক্ষার প্রবেশপত্র</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    id="menu-item-50"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50"
+                  >
+                    <a>অন্যান্য…</a>
+                    <ul class="sub-menu">
+                      <li
+                        id="menu-item-32"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"
+                      >
+                        <a href="#"
+                          >যোগাযোগ</a
+                        >
+                      </li>
+                      <li
+                        id="menu-item-36"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"
+                      >
+                        <a href="#"
+                          >মুজিব কর্নার</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="notice-and-login-btn-snd-wrapper">
+                <a
+                  href="https://gripetech.com/demo/notice-board/"
+                  class="notice-new-btn-nm"
+                  >নোটিশ</a
+                >
+                <a
+                  href="https://gripetech.com/demo/teacher-panel/"
+                  class="login-new-btn-nm"
+                  >লগইন <i class="fa-solid fa-user"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 				end out of wrapper menu -->
+
+        <!-- start mobile menu -->
+        <div id="mobile-menu">
+          <nav>
+            <div class="menu-main-menu-container">
+              <ul id="menu-main-menu-1" class="menu">
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-28"
+                >
+                  <a href="#" aria-current="page"
+                    ><i class="fa-solid fa-house"></i> প্রচ্ছদ</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44"
+                >
+                  <a>পরিচিতি</a>
+                  <ul class="sub-menu">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"
+                    >
+                      <a href="#"
+                        >এক নজরে পরিচিতি</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-45"
+                >
+                  <a>জনবল</a>
+                  <ul class="sub-menu">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
+                    >
+                      <a href="#"
+                        >শিক্ষক ও শিক্ষিকা</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"
+                    >
+                      <a href="#"
+                        >কর্মকর্তা</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-46"
+                >
+                  <a>শিক্ষার্থী</a>
+                  <ul class="sub-menu">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"
+                    >
+                      <a
+                        href="https://gripetech.com/demo/list-of-studying-students/"
+                        >অধ্যায়নরত শিক্ষার্থীর তালিকা</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"
+                    >
+                      <a
+                        href="https://gripetech.com/demo/digital-attendance-information/"
+                        >ডিজিটাল হাজিরার তথ্য</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"
+                    >
+                      <a href="#"
+                        >আইডি কার্ড ডাউনলোড</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"
+                >
+                  <a href="#"
+                    >পরীক্ষার ফলাফল</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"
+                >
+                  <a href="#"
+                    >ক্লাস রুটিন</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"
+                >
+                  <a href="#">ছুটির দিন</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-47"
+                >
+                  <a>ভর্তি আবেদন</a>
+                  <ul class="sub-menu">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"
+                    >
+                      <a href="#"
+                        >অনলাইন ভর্তি আবেদন</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"
+                    >
+                      <a
+                        href="https://gripetech.com/demo/wp-content/uploads/2023/09/Sample-School-Admission-Form.webp"
+                        >ভর্তি পরীক্ষার ফর্ম</a
+                      >
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"
+                    >
+                      <a
+                        href="https://gripetech.com/demo/admission-admit-card-checker/"
+                        >ভর্তি পরীক্ষার প্রবেশপত্র</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50"
+                >
+                  <a>অন্যান্য…</a>
+                  <ul class="sub-menu">
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"
+                    >
+                      <a href="#">যোগাযোগ</a>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"
+                    >
+                      <a href="#"
+                        >মুজিব কর্নার</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- end main menu -->
+      </header>
+      <div class="wrapper">
+        <div class="notice-btn-wrapper">
+           <button id="notcie-button-n"><a href="#">নোটিশ</a></button>
+           <button id="teacher-login-btn"><a href="#">লগইন <i class="fa-solid fa-user"></i></a></button>
+         </div>
+          </div>
+
+      <!--================================ -->
+      <!-- Slider section Code  Section code Start -->
+
+      <!-- ======================== -->
+      <section class="wrapper">
+        <div class="slider-and-profile-wrapper">
+           <div class="slider-main-wrapper">
+              <div class="slider-container">
+                 <div class="slider" style="transform: translateX(0%);">
+                          <div class="slide">
+            <img src="./assets/images/man.jpg" alt="Image">
+          </div>
+                            <div class="slide">
+            <img src="./assets/images/man.jpg" alt="Image">
+          </div>
+                            <div class="slide">
+            <img src="./assets/images/man.jpg" alt="Image">
+          </div>
+                        <!-- Add more slides here -->
+    </div>
+              </div>
+              <div class="slider-controls">
+                 <div class="slider-control" id="prev-slide">❮</div>
+                 <div class="slider-control" id="next-slide">❯</div>
+              </div>
+              <img class="slider-overfollow-image" src="https://gripetech.com/demo/wp-content/themes/E-School/img/grass.png">
+           </div>
+           <div class="school-high-profile">
+              <div class="two-profile-wrapper">
+    
+                                   <div class="profile-wrapper">
+          <div class="profile-image">
+           <img src="./assets/images/man.jpg">
+          </div>
+          <div class="profile-details">
+           <span class="designation">চেয়ারম্যান</span>
+           <span class="profile-name">আব্দুল্লাহ জাহাঙ্গীর</span>
+           <span class="read-profile-about"><a href="#">তাঁর সম্পর্কে পড়ুন...</a></span>
+          </div>
+         </div>
+                          <div class="profile-wrapper">
+          <div class="profile-image">
+           <img src="./assets/images/man.jpg">
+          </div>
+          <div class="profile-details">
+           <span class="designation">প্রিন্সিপাল</span>
+           <span class="profile-name">জয়নাল আহমেদ</span>
+           <span class="read-profile-about"><a href="#">তাঁর সম্পর্কে পড়ুন...</a></span>
+          </div>
+         </div>
+                      
+                 <div class="class-rutin-and-result">
+                    <a href="#"><img src="https://gripetech.com/demo/wp-content/themes/E-School/img/class-routine.png"> ক্লাস রুটিন</a>
+                    <a href="#"><img src="https://gripetech.com/demo/wp-content/themes/E-School/img/ssc-results.png"> ফলাফল</a>
+                 </div>
+    
+    
+    
+            
+                      
+<div class="nnn-school-mini-details-wrapper">
+<ul>
+<li><i class="fa-solid fa-calendar-plus"></i> স্থাপিত সন - ১৯৭১ খ্রিঃ</li>
+<li><i aria-hidden="true" class="fas fa-bookmark"></i>EIIN নাম্বার - 12312</li>
+<li><i class="fa-solid fa-tty"></i> টেলিফোন - ০৫২১900909</li>
+</ul>
+</div>
+                  
+        
+              </div>
+           </div>
+        </div>
+     </section>
+      <!--================================ -->
+      <!-- Notice section Code  Section code Start -->
+
+      <!-- ======================== -->
+
+<div class="wrapper">
+  <div class="last-notice-and-use-link-main-wrapper">
+    <div class="last-notice-wrapper">
+      <span>সর্বশেষ নোটিশ</span>
+      <div class="notice-table">
+                        <div class="notice-row">
+              <div class="notice-date">2023-09-24</div>
+              <div class="notice-content"><a href="#">বৃহত্তর ছাত্র-ছাত্রীদের সহযোগিতা ও সহযোগিনী প্রশংসা সম্পর্কিত</a></div>
+            </div>
+                            <div class="notice-row">
+              <div class="notice-date">2023-09-24</div>
+              <div class="notice-content"><a href="#">শ্রদ্ধাশ্রদ্ধ ছাত্র-ছাত্রীদের জন্য নোটিশ</a></div>
+            </div>
+                            <div class="notice-row">
+              <div class="notice-date">2023-09-24</div>
+              <div class="notice-content"><a href="#">নোটিশের প্রসঙ্গে</a></div>
+            </div>
+                            <div class="notice-row">
+              <div class="notice-date">2023-09-24</div>
+              <div class="notice-content"><a href="#">ছাত্রীদের দ্বিতীয় সেমেস্টার পরীক্ষা</a></div>
+            </div>
+                      </div>
+      <a href="#">সকল নোটিশ...</a>
+    </div>
+    <div class="ursefull-links-wrapper">
+      
+      
+      
+      <div class="slider-container-quote-t-main-wrapper">
+      <span class="teachers-bani-title">শিক্ষক বানী</span>
+          <!-- start slider card -->
+      <div class="quote-slide quote-slider-nnasdhgjh" style="display: none;">
+      <div class="quote">
+          <div class="quote-author-box">
+              <div class="t-quote-image-box">
+                  <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+              <div class="t-quote-details">
+                  <span><i class="fa-solid fa-user"></i> Asma Begum</span>
+                  <span><i class="fa-solid fa-pen-nib"></i> শিক্ষক</span>
+                  <span><i class="fa-solid fa-calendar-days"></i> Thursday, October 5, 2023 | বানী</span>
+              </div>
+          </div>
+          <div class="quote-main-box">
+              <p><sup><i class="fa-solid fa-quote-left"></i></sup>Pass<sub><i class="fa-solid fa-quote-right"></i></sub></p>                    <a href="#">পড়ুন...</a>
+          </div>
+      </div>
+      </div>
+<!-- end slider card -->
+  <!-- start slider card -->
+      <div class="quote-slide quote-slider-nnasdhgjh" style="display: none;">
+      <div class="quote">
+          <div class="quote-author-box">
+              <div class="t-quote-image-box">
+                  <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+              <div class="t-quote-details">
+                  <span><i class="fa-solid fa-user"></i> জয়নাল আহমেদ</span>
+                  <span><i class="fa-solid fa-pen-nib"></i> প্রধান শিক্ষক</span>
+                  <span><i class="fa-solid fa-calendar-days"></i> Tuesday, September 26, 2023 | বানী</span>
+              </div>
+          </div>
+          <div class="quote-main-box">
+              <p><sup><i class="fa-solid fa-quote-left"></i></sup>চুল তার কবেকার অন্ধকার বিদিশার নিশা, মুখ তার শ্রাবস্তীর কারুকার্য; অতিদূর সমুদ্রের’পর হাল ভেঙে যে নাবিক হারায়েছে দিশা<sub><i class="fa-solid fa-quote-right"></i></sub></p>                    <a href="#">পড়ুন...</a>
+          </div>
+      </div>
+      </div>
+<!-- end slider card -->
+  <!-- start slider card -->
+      <div class="quote-slide quote-slider-nnasdhgjh" style="display: none;">
+      <div class="quote">
+          <div class="quote-author-box">
+              <div class="t-quote-image-box">
+                  <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+              <div class="t-quote-details">
+                  <span><i class="fa-solid fa-user"></i> Farhan Ahmed</span>
+                  <span><i class="fa-solid fa-pen-nib"></i> সহকারী শিক্ষক</span>
+                  <span><i class="fa-solid fa-calendar-days"></i> Tuesday, September 26, 2023 | বানী</span>
+              </div>
+          </div>
+          <div class="quote-main-box">
+              <p><sup><i class="fa-solid fa-quote-left"></i></sup>তোমারে যে চাহিয়াছে ভুলে একদিন, সে জানে তোমারে ভোলা কি কঠিন<sub><i class="fa-solid fa-quote-right"></i></sub></p>                    <a href="#">পড়ুন...</a>
+          </div>
+      </div>
+      </div>
+<!-- end slider card -->
+  <!-- start slider card -->
+      <div class="quote-slide quote-slider-nnasdhgjh" style="display: none;">
+      <div class="quote">
+          <div class="quote-author-box">
+              <div class="t-quote-image-box">
+                  <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+              <div class="t-quote-details">
+                  <span><i class="fa-solid fa-user"></i> Asma Begum</span>
+                  <span><i class="fa-solid fa-pen-nib"></i> শিক্ষক</span>
+                  <span><i class="fa-solid fa-calendar-days"></i> Tuesday, September 26, 2023 | বানী</span>
+              </div>
+          </div>
+          <div class="quote-main-box">
+              <p><sup><i class="fa-solid fa-quote-left"></i></sup>প্রহর শেষের আলোয় রাঙা সেদিন চৈত্রমাস তোমার চোখে দেখেছিলাম আমার সর্বনাশ।<sub><i class="fa-solid fa-quote-right"></i></sub></p>                    <a href="#">পড়ুন...</a>
+          </div>
+      </div>
+      </div>
+<!-- end slider card -->
+  <!-- start slider card -->
+      <div class="quote-slide quote-slider-nnasdhgjh" style="display: block;">
+      <div class="quote">
+          <div class="quote-author-box slide-from-right">
+              <div class="t-quote-image-box">
+                  <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+              <div class="t-quote-details">
+                  <span><i class="fa-solid fa-user"></i> Asma Begum</span>
+                  <span><i class="fa-solid fa-pen-nib"></i> শিক্ষক</span>
+                  <span><i class="fa-solid fa-calendar-days"></i> Tuesday, September 26, 2023 | বানী</span>
+              </div>
+          </div>
+          <div class="quote-main-box slide-from-left">
+              <p><sup><i class="fa-solid fa-quote-left"></i></sup>নদীর এপার কহে ছাড়িয়া নিশ্বাস, ওপারেতে সর্বসুখ আমার বিশ্বাস। নদীর ওপার বসি দীর্ঘশ্বাস ছাড়ে; কহে, যাহা কিছু সুখ সকলি ওপারে।<sub><i class="fa-solid fa-quote-right"></i></sub></p>                    <a href="#">পড়ুন...</a>
+          </div>
+      </div>
+      </div>
+<!-- end slider card -->
+
+  
+  
+
+</div>
+
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+
+      <!--================================ -->
+      <!-- History Section code End -->
+
+      <!-- ======================== -->
+
+<section class="wrapper">
+    <div class="questions-and-anser-wrapper">
+        <div class="school-qnd">
+          <div class="qnada-wrapper">
+            <span class="school-questions"
+              ><img
+                src="https://gripetech.com/demo/wp-content/themes/E-School/img/question-mark.png"
+              />
+              বিদ্যালয়ের স্থাপনার সাল ও ইতিহাস কী<span class="q-marks-n"
+                >?</span
+              ></span
+            >
+            <div class="questionanswer">
+              <p>
+                আমাদের বিদ্যালয় সাল ১৯৬৫ সালে প্রতিষ্ঠিত হয়। এটি একটি ঐতিহাসিক
+                স্থান, এখানে বেশীরভাগে গুরুত্বপূর্ণ সাক্ষরতা এবং সাংস্কৃতিক গতি
+                ঘটে এবং শিক্ষার্থীদের শিক্ষা এবং আদর্শ উন্নত করার মাধ্যমে
+                বিদ্যালয়টি এখন একটি প্রতিষ্ঠান হিসেবে পরিচিত। এই বিদ্যালয়ের
+                ইতিহাস অত্যন্ত গর্বস্ফূর্তি সাথে দেশের শিক্ষা প্রতিষ্ঠানের মধ্যে
+                একটি গুরুত্বপূর্ণ স্থান রয়েছে।
+              </p>
+              <a href="#">আরও পড়ুন...</a>
+            </div>
+          </div>
+        </div>
+        <div class="school-picture-main-wrapper">
+          <img
+            src="./assets/images/man.jpg"
+            alt="Institute Photo"
+          />
+        </div>
+      </div>
+</section>
+
+      <!--================================ -->
+      <!-- History Section code End -->
+
+      <!-- ======================== -->
+
+      <!--================================ -->
+      <!--  Education code Start -->
+
+      <!-- ======================== -->
+
+<section class="wrapper">
+    <div class="education-menus-main-wrapper">
+        <!-- start menus card -->
+        <div
+          class="education-menus-card aos-init aos-animate"
+          data-aos="zoom-in-down"
+        >
+          <span class="education-menus-title">আমাদের সম্পর্কে</span>
+          <div
+            class="menu-%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a6%ae%e0%a7%8d%e0%a6%aa%e0%a6%b0%e0%a7%8d%e0%a6%95%e0%a7%87-container"
+          >
+            <ul
+              id="menu-%e0%a6%86%e0%a6%ae%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0-%e0%a6%b8%e0%a6%ae%e0%a7%8d%e0%a6%aa%e0%a6%b0%e0%a7%8d%e0%a6%95%e0%a7%87"
+              class="menu"
+            >
+              <li
+                id="menu-item-132"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132"
+              >
+                <a href="#">প্রতিষ্ঠান ইতিহাস</a>
+              </li>
+              <li
+                id="menu-item-133"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-133"
+              >
+                <a href="#">স্তর ভিত্তিক শিক্ষার্থী</a>
+              </li>
+              <li
+                id="menu-item-134"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"
+              >
+                <a href="#">শিক্ষার্থীর তথ্য</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="education-menus-card aos-init aos-animate"
+          data-aos="zoom-in-down"
+        >
+          <span class="education-menus-title">প্রশাসন</span>
+          <div
+            class="menu-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%be%e0%a6%b8%e0%a6%a8-container"
+          >
+            <ul
+              id="menu-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%be%e0%a6%b8%e0%a6%a8"
+              class="menu"
+            >
+              <li
+                id="menu-item-135"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"
+              >
+                <a href="#">অধ্যক্ষ</a>
+              </li>
+              <li
+                id="menu-item-136"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"
+              >
+                <a href="#">শিক্ষকবৃন্দ</a>
+              </li>
+              <li
+                id="menu-item-137"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137"
+              >
+                <a href="#">স্টাফবৃন্দ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="education-menus-card aos-init aos-animate"
+          data-aos="zoom-in-down"
+        >
+          <span class="education-menus-title">প্রতিষ্ঠান সম্বলিত তথ্য</span>
+          <div
+            class="menu-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8-%e0%a6%b8%e0%a6%ae%e0%a7%8d%e0%a6%ac%e0%a6%b2%e0%a6%bf%e0%a6%a4-%e0%a6%a4%e0%a6%a5%e0%a7%8d%e0%a6%af-container"
+          >
+            <ul
+              id="menu-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%a4%e0%a6%bf%e0%a6%b7%e0%a7%8d%e0%a6%a0%e0%a6%be%e0%a6%a8-%e0%a6%b8%e0%a6%ae%e0%a7%8d%e0%a6%ac%e0%a6%b2%e0%a6%bf%e0%a6%a4-%e0%a6%a4%e0%a6%a5%e0%a7%8d%e0%a6%af"
+              class="menu"
+            >
+              <li
+                id="menu-item-138"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138"
+              >
+                <a href="#">আসন সংখ্যা</a>
+              </li>
+              <li
+                id="menu-item-139"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139"
+              >
+                <a href="#">ভৌত অবকাঠামো</a>
+              </li>
+              <li
+                id="menu-item-140"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140"
+              >
+                <a href="#">সুবিধা সমূহ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="education-menus-card aos-init aos-animate"
+          data-aos="zoom-in-down"
+        >
+          <span class="education-menus-title">একাডেমিক তথ্য</span>
+          <div
+            class="menu-%e0%a6%8f%e0%a6%95%e0%a6%be%e0%a6%a1%e0%a7%87%e0%a6%ae%e0%a6%bf%e0%a6%95-%e0%a6%a4%e0%a6%a5%e0%a7%8d%e0%a6%af-container"
+          >
+            <ul
+              id="menu-%e0%a6%8f%e0%a6%95%e0%a6%be%e0%a6%a1%e0%a7%87%e0%a6%ae%e0%a6%bf%e0%a6%95-%e0%a6%a4%e0%a6%a5%e0%a7%8d%e0%a6%af"
+              class="menu"
+            >
+              <li
+                id="menu-item-141"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"
+              >
+                <a href="#">ক্লাস রুটিন</a>
+              </li>
+              <li
+                id="menu-item-142"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"
+              >
+                <a href="#">একাডেমিক সিলেবাস</a>
+              </li>
+              <li
+                id="menu-item-143"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"
+              >
+                <a href="#">একাডেমিক ক্যালেন্ডার</a>
+              </li>
+              <li
+                id="menu-item-144"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"
+              >
+                <a href="#">পরীক্ষার ফলাফল</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end menus card -->
+      </div>
+</section>
+      <!--================================ -->
+      <!--  Education code End -->
+
+      <!-- ======================== -->
+      <!--================================ -->
+      <!--  Counter code Start -->
+
+      <!-- ======================== -->
+
+<section class="wrapper">
+    <div class="funcounter br" bis_skin_checked="1">
+        <div class="countercol" bis_skin_checked="1">
+          <i class="fa-solid fa-user-graduate"></i
+          ><span class="counternum"><span data-num="2">2</span>+</span
+          ><span class="countercap">শিক্ষার্থী</span>
+        </div>
+        <div class="countercol" bis_skin_checked="1">
+          <i class="fa-solid fa-user-pen"></i
+          ><span class="counternum"><span data-num="5">5</span>+</span
+          ><span class="countercap">শিক্ষক ও শিক্ষিকা</span>
+        </div>
+        <div class="countercol" bis_skin_checked="1">
+          <i class="fa-solid fa-users"></i
+          ><span class="counternum"><span data-num="1">1</span>+</span
+          ><span class="countercap">কর্মকত্র্রী</span>
+        </div>
+      </div>
+</section>
+
+      <!--================================ -->
+      <!-- Counter Section Code End code End -->
+
+      <!-- ======================== -->
+      <!--================================ -->
+      <!-- Teachers Section Code Start code End -->
+
+      <!-- ======================== -->
+<section class="wrapper">
+    <div class="teacher-slider-title-wrapper-nnn-tb">
+        <button class="prev-btn-t-n">❮</button>
+        <h2>আমাদের শিক্ষকবৃন্দ</h2>
+        <button class="next-btn-t-n">❯</button>
+      </div>
+      <div class="teacher-slider carousel slick-initialized slick-slider">
+  
+        
+        <!-- end teacher slider -->
+        <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 3510px; transform: translate3d(-1080px, 0px, 0px);" role="listbox"><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="-4" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            Farhan Ahmed                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            সহকারী শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="-3" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            জয়নাল আহমেদ                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            প্রধান শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="-2" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            রাবেয়া বেগম                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide04" data-slick-index="-1" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            নাবিলা                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            সহকারী শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:admin@ahmadnagarhs.edu.bd" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-current slick-active" style="width: 270px;" tabindex="0" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="false">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="tcher-batch-image-slider-nnnppp">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            Asma Begum                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:pe.ople.s.d.anl.63@gmail.com" tabindex="0"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1609591301" tabindex="0"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-active" style="width: 270px;" tabindex="0" role="option" aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="false">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="tcher-batch-image-slider-nnnppp">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            Farhan Ahmed                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            সহকারী শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="0"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="0"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-active" style="width: 270px;" tabindex="0" role="option" aria-describedby="slick-slide02" data-slick-index="2" aria-hidden="false">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="tcher-batch-image-slider-nnnppp">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            জয়নাল আহমেদ                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            প্রধান শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="0"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="0"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-active" style="width: 270px;" tabindex="0" role="option" aria-describedby="slick-slide03" data-slick-index="3" aria-hidden="false">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="tcher-batch-image-slider-nnnppp">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            রাবেয়া বেগম                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="0"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="0"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide04" data-slick-index="4" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="tcher-batch-image-slider-nnnppp">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            নাবিলা                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            সহকারী শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:admin@ahmadnagarhs.edu.bd" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="5" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            Asma Begum                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:pe.ople.s.d.anl.63@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1609591301" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="6" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            Farhan Ahmed                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            সহকারী শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="7" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            জয়নাল আহমেদ                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            প্রধান শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col-sm-4 col-md-3 slick-slide slick-cloned" style="width: 270px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="8" id="" aria-hidden="true">
+            <div class="card-content">
+                <div class="teachers-details-bar-slider-nnn">
+                    <div class="teachers-info-main-wrapper-slider-nnajsdgj">
+                        <div class="techers-single-image-box-slider-nnnas">
+                            <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">
+                        </div>
+						<img src="https://gripetech.com/demo/wp-content/themes/E-School/img/gift2.png" id="">
+                        <!-- Add the appropriate HTML code for the teacher batch image -->
+                    </div>
+                    <div class="profile-content-t-slider-nn profilename-bg-t-slider-nn">
+                        <h3 class="name">
+                            রাবেয়া বেগম                            <img src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png" alt="verified icon">
+                        </h3>
+                        <p class="designation">
+                            শিক্ষক                        </p>
+						<div class="teachers-contact-slider-info">
+							<span><a href="mailto:irontmp+hiif6@gmail.com" tabindex="-1"><i class="fa-regular fa-envelope"></i></a></span>
+							<span><a href="tel:1738796710" tabindex="-1"><i class="fa-solid fa-phone"></i></a></span>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div></div></div></div>
+      
+
+
+</section>
+
+      <!--================================ -->
+      <!-- Infromation and Admit  Section Code End code End -->
+
+      <!-- ======================== -->
+      <div class="main-tab-content-wrapper">
+        <div class="tabs">
+            <button class="tab-btn active-tab-btn" onclick="openTab('tab1', this)">ভর্তি</button>
+            <button class="tab-btn" onclick="openTab('tab2', this)">পরীক্ষার রুটিন</button>
+        </div>
+        <!-- Start Tab One --> 				
+        <div class="tab-content" id="tab1" style="display: block;">
+            <div class="downloadable-notice-download-table">		<div class="postsdfgs">
+                <div class="post-datesdfg"><i class="fa-solid fa-calendar-days"></i> 2023-10-13</div>
+                <div class="post-titlesdfg"><i class="fa-solid fa-plus"></i> Admission form</div>
+                <div class="post-downloadsdfg"><a href="#" target="_blank"><i class="fa-solid fa-download"></i> Download</a></div>
+            </div>
+                    <div class="postsdfgs">
+                <div class="post-datesdfg"><i class="fa-solid fa-calendar-days"></i> 2023-09-24</div>
+                <div class="post-titlesdfg"><i class="fa-solid fa-plus"></i> Notice 1</div>
+                <div class="post-downloadsdfg"><a href="#" target="_blank"><i class="fa-solid fa-download"></i> Download</a></div>
+            </div>
+            </div>
+        </div>
+        <!-- End Tab One -->
+        
+        <!-- Start Tab Two -->				
+        <div class="tab-content" id="tab2" style="display: none;">
+            <div class="downloadable-notice-download-table">		<div class="postsdfgs">
+                <div class="post-datesdfg"><i class="fa-solid fa-calendar-days"></i> 2023-09-24</div>
+                <div class="post-titlesdfg"><i class="fa-solid fa-plus"></i> Notice Exam routine</div>
+                <div class="post-downloadsdfg"><a href="#" target="_blank"><i class="fa-solid fa-download"></i> Download</a></div>
+            </div>
+            </div>
+    
+        </div>
+        <!-- End Tab Two -->				
+                        
+        </div>
+
+      <!--================================ -->
+      <!-- Blog Post Section Code End code Start -->
+
+      <!-- ======================== -->
+<div class="wrapper">
+    <div class="tecahers-post-sections-main-wrapper">
+        <div class="tabsnnnnnnn">
+      <div class="tabasdfaase active" onclick="showTab(1)">
+          গণিত		</div>
+
+      <div class="tabasdfaase" onclick="showTab(2)">
+      ইংরেজি	  
+      </div>
+      <div class="tabasdfaase" onclick="showTab(3)">
+      ইতিহাস		</div>
+      <div class="tabasdfaase" onclick="showTab(4)">
+      জীব বিজ্ঞান		</div>
+      <div class="tabasdfaase" onclick="showTab(5)">
+      পদার্থ বিজ্ঞান		</div>
+      <div class="tabasdfaase" onclick="showTab(6)">
+          ভূগোল শিক্ষা		</div>
+      <div class="tabasdfaase" onclick="showTab(7)">
+          রসায়ন	  
+      </div>
+    </div>
+
+    <div class="tab-contentasdf">
+      <div id="tabsdfg1" class="t-content-blog-cat-p active">
+          <div class="n-teacher-catpost">
+
+              <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="গণিত বিষয়ে শেখানো কার্যক্রম পরিচালনার পর্যায় কয়টি ও কি কি" alt="গণিত বিষয়ে শেখানো কার্যক্রম পরিচালনার পর্যায় কয়টি ও কি কি">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>জয়নাল আহমেদ</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>প্রধান শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">গণিত বিষয়ে শেখানো কার্যক্রম পরিচালনার…</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১০ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 3</li>
+                 <li><i class="fa-solid fa-folder-open"></i> গণিত</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+      <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="গণিত এসাইনমেন্ট নবম শ্রেণি উত্তর" alt="গণিত এসাইনমেন্ট নবম শ্রেণি উত্তর">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>Farhan Ahmed</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>সহকারী শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">গণিত এসাইনমেন্ট নবম শ্রেণি উত্তর</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১০ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 4</li>
+                 <li><i class="fa-solid fa-folder-open"></i> গণিত</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+      <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="গণিতের সকল সূত্র একসাথে" alt="গণিতের সকল সূত্র একসাথে">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>Asma Begum</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">গণিতের সকল সূত্র একসাথে</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১০ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 4</li>
+                 <li><i class="fa-solid fa-folder-open"></i> গণিত</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+  
+          
+
+
+          </div>
+      </div>
+
+      <div id="tabsdfg2" class="t-content-blog-cat-p">
+        <div class="n-teacher-catpost">
+
+              <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="ইংরেজি ক্লাস সেভেন এর এসাইনমেন্ট" alt="ইংরেজি ক্লাস সেভেন এর এসাইনমেন্ট">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>জয়নাল আহমেদ</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>প্রধান শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">ইংরেজি ক্লাস সেভেন এর এসাইনমেন্ট</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১১ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 0</li>
+                 <li><i class="fa-solid fa-folder-open"></i> ইংরেজি</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+      <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="ইংরেজি আলফাবেট কয়টি" alt="ইংরেজি আলফাবেট কয়টি">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>Farhan Ahmed</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>সহকারী শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">ইংরেজি আলফাবেট কয়টি</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১১ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 0</li>
+                 <li><i class="fa-solid fa-folder-open"></i> ইংরেজি</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+      <!-- start teachers cat post -->
+  <div class="n-teacher-catpost-wrapper">
+      <a href="#">
+          <div class="teachers-cat-post-thumbnail">
+              <img src="./assets/images/man.jpg" title="ইংরেজি আর্টিকেল লেখার নিয়ম" alt="ইংরেজি আর্টিকেল লেখার নিয়ম">
+              <div class="overfollow-teacher-cat-pos-wrapper">
+                  <div class="t-t-t-cat-p-p-photo">
+                      <img src="./assets/images/man.jpg"
+ style="max-width: 200px;">                    </div>
+                  <div class="t-p-gjyt-degig">
+                      <p class="postkrito-techer-name"><i class="fa-solid fa-user"></i><span>Asma Begum</span><img class="verifide-t-3d-skew-animation" width="15px" src="https://gripetech.com/demo/wp-content/themes/E-School/img/verified.png"></p>
+                      <p class="postkrito-t-degihgnat"><i class="fa-solid fa-pen-nib"></i><span>শিক্ষক</span></p>
+                  </div>
+              </div>
+          </div>
+          <span class="teacher-cat-nn-post-title">ইংরেজি আর্টিকেল লেখার নিয়ম</span>
+          <div class="teachers-cat-p-meta-data">
+              <ul>
+                 <li><i class="fa-solid fa-calendar-days"></i> ১১ জানুয়ারি ২০২৩					</li>
+                 <li><i class="fa-solid fa-eye"></i> 0</li>
+                 <li><i class="fa-solid fa-folder-open"></i> ইংরেজি</li>
+              </ul>
+          </div>
+      </a>
+  </div>
+<!-- start teachers cat post -->
+          </div>
+      </div>
+ 
+      <div id="tabsdfg3" class="t-content-blog-cat-p">
+        <div class="n-teacher-catpost">
+
+          <p>No posts found</p>
+
+          </div>
+      
+      </div>
+        
+        
+      <div id="tabsdfg4" class="t-content-blog-cat-p">
+        
+        <div class="n-teacher-catpost">
+
+          <p>No posts found</p>
+
+          </div>
+        
+      </div>
+        
+        
+        
+        
+      <div id="tabsdfg5" class="t-content-blog-cat-p">
+          <div class="n-teacher-catpost">
+
+          <p>No posts found</p>
+
+          </div>
+      </div>
+
+      <div id="tabsdfg6" class="t-content-blog-cat-p">
+        <div class="n-teacher-catpost">
+
+          <p>No posts found</p>
+
+          </div>
+      </div>
+      
+      
+      <div id="tabsdfg7" class="t-content-blog-cat-p">
+      <div class="n-teacher-catpost">
+
+          <p>No posts found</p>
+
+          </div>
+      </div>
+    </div>
+    </div>
+</div>
+      <!--================================ -->
+      <!-- Best Student Section Code End code Start -->
+
+      <!-- ======================== -->
+<div class="wrapper">
+    <h2 class="school-topper-here">আমাদের সেরা শিক্ষার্থী</h2>
+    <div class="best-students-main-wrapper">
+
+      <!-- start student card -->
+                                <div class="best-student-card">
+                <img src="./assets/images/man.jpg">
+                <span class="b-stu-name">নুর আলম</span>
+                <span class="b-stu-gpa">জিপিএ 5</span>
+                <span class="b-stu-session">সেশন ২০-২১</span>
+            </div>
+                                    <div class="best-student-card">
+                <img src="./assets/images/man.jpg">
+                <span class="b-stu-name">আবুল কাসেম</span>
+                <span class="b-stu-gpa">জিপিএ 4.88</span>
+                <span class="b-stu-session">সেশন ২০-২১</span>
+            </div>
+                                    <div class="best-student-card">
+                <img src="./assets/images/man.jpg">
+                <span class="b-stu-name">সাদিকা ইসলাম</span>
+                <span class="b-stu-gpa">জিপিএ 5</span>
+                <span class="b-stu-session">সেশন ২০-২১</span>
+            </div>
+                                    <div class="best-student-card">
+                <img src="./assets/images/man.jpg">
+                <span class="b-stu-name">আবু বকর সিদ্দিক</span>
+                <span class="b-stu-gpa">জিপিএ 4.98</span>
+                <span class="b-stu-session">সেশন ২০-২১</span>
+            </div>
+                                    <div class="best-student-card">
+                <img src="./assets/images/man.jpg">
+                <span class="b-stu-name">আবু বকর সিদ্দিক</span>
+                <span class="b-stu-gpa">জিপিএ 4.5</span>
+                <span class="b-stu-session">সেশন ২০-২১</span>
+            </div>
+                                <!-- end student card -->
+
+      
+   </div>
+</div>
+      <!--================================ -->
+      <!-- Adress Section Code End code Start -->
+
+      <!-- ======================== -->
+
+      <div class="main-wrapper">
+        <div class="wrapper">
+          <!-- start google map -->
+          <!-- Container for the map iframe -->
+          <h2 class="school-topper-here" style="margin-bottom: 0px">
+            আমাদের ঠিকানা
+          </h2>
+
+          <div class="adress-iframe-text-nnn">
+            <span class="address-text-bar-iframe-nn"
+              ><i class="fa-solid fa-location-dot"></i> প্রধান সড়ক, কাচারী
+              বাজার, রংপুর সদর, রংপুর <span>(5400)</span></span
+            >
+          </div>
+
+          <div id="map-container">
+            <!-- Embed Google Maps using iframe -->
+            <iframe
+              id="map"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14301.487166254203!2d89.0243555!3d26.3468342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3742216baeaad0x462d964983c4d456!2sPatgramTaraknath(T.N)SchoolCollege!5e0!3m2!1sen!2sbd!4v1695574910408!5m2!1sen!2sbd"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <!-- end google map -->
+        </div>
+      </div>
+      <div class="wrapper">
+        <div id="hmpdivider" bis_skin_checked="1"></div>
+        <div class="footer-note-main-wrapper">
+          <h2 class="school-topper-here">
+            শিক্ষাই জাতির মেরুদন্ড<span>,</span> এসো শিক্ষার জন্য<span>!</span>
+          </h2>
+          <p class="main-foot-note">
+            শিক্ষা আমাদের জাতির উন্নতির মাধ্যম, জ্ঞানের আলোকে পথ প্রদর্শন করে।
+            সবাইকে শিক্ষার দিকে প্রতিবদ্ধ হতে এবং শিক্ষার মূল্যায়ন করতে আমরা
+            আমাদের সমর্থন প্রদান করি। আসুন সবাই একসাথে শিক্ষার সাথে জুড়ে আগাই
+            জাতির উন্নতির পথে।
+          </p>
+        </div>
+      </div>
+      <!--================================ -->
+      <!-- Adress  Section Code End code End -->
+
+      <!-- ======================== -->
+
+      <!--================================ -->
+      <!-- Footer  Section Code Start code Start -->
+
+      <!-- ======================== -->
+      <footer>
+        <div class="wrapper">
+          <div
+            class="footer-design-img aos-init aos-animate"
+            data-aos="slide-up"
+          >
+            <img
+              src="https://gripetech.com/demo/wp-content/themes/E-School/img/grass-footer.png"
+            />
+          </div>
+        </div>
+        <div class="main-wrapper main-footer-wrapper">
+          <div class="wrapper">
+            <div class="footer-widgets-main-wrraper">
+              <div class="footer-widget aos-init" data-aos="slide-up">
+                <h2>যোগাযোগ</h2>
+
+                <ul>
+                  <li>
+                    <i class="fa-regular fa-envelope"></i
+                    ><a href="mailto:onlineworkerbdd@gmail.com" target="_blank">
+                      onlineworkerbdd@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-phone"></i
+                    ><a href="tel:০৫২১900909" target="_blank"> ০৫২১900909</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-location-dot"></i> প্রধান সড়ক, কাচারী
+                    বাজার, রংপুর সদর, রংপুর (5400)
+                  </li>
+                </ul>
+              </div>
+
+              <!-- start footer widget -->
+              <div class="footer-widget aos-init" data-aos="slide-up">
+                <h2>ফুটার ১</h2>
+                <div class="menu-footer-1-container">
+                  <ul id="menu-footer-1" class="menu">
+                    <li
+                      id="menu-item-119"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"
+                    >
+                      <a href="#">মুজিব কর্নার</a>
+                    </li>
+                    <li
+                      id="menu-item-120"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-120"
+                    >
+                      <a href="#">নোটিসবোর্ড</a>
+                    </li>
+                    <li
+                      id="menu-item-121"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"
+                    >
+                      <a href="#">পরীক্ষার ফলাফল</a>
+                    </li>
+                    <li
+                      id="menu-item-122"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122"
+                    >
+                      <a href="#">অনলাইন ভর্তি আবেদন</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-widget aos-init" data-aos="slide-up">
+                <h2>ফুটার ২</h2>
+                <div class="menu-footer-2-container">
+                  <ul id="menu-footer-2" class="menu">
+                    <li
+                      id="menu-item-123"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123"
+                    >
+                      <a href="#">প্রতিষ্ঠানের ইতিহাস</a>
+                    </li>
+                    <li
+                      id="menu-item-124"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"
+                    >
+                      <a href="#">একাডেমিক ক্যালেন্ডার</a>
+                    </li>
+                    <li
+                      id="menu-item-125"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125"
+                    >
+                      <a href="#">যোগাযোগ</a>
+                    </li>
+                    <li
+                      id="menu-item-126"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"
+                    >
+                      <a href="#">ছুটির দিন</a>
+                    </li>
+                    <li
+                      id="menu-item-127"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-127"
+                    >
+                      <a href="#">কৃতি শিক্ষার্থী</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-widget aos-init" data-aos="slide-up">
+                <h2>ফুটার ৩</h2>
+                <div class="menu-footer-3-container">
+                  <ul id="menu-footer-3" class="menu">
+                    <li
+                      id="menu-item-128"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-128"
+                    >
+                      <a href="#">আমাদের সেবা</a>
+                    </li>
+                    <li
+                      id="menu-item-129"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"
+                    >
+                      <a href="#">গোপনীয়তা নীতি</a>
+                    </li>
+                    <li
+                      id="menu-item-130"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"
+                    >
+                      <a href="#">শর্তাবলী</a>
+                    </li>
+                    <li
+                      id="menu-item-131"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-131"
+                    >
+                      <a href="#">সাইটম্যাপ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end footer widget -->
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!--================================ -->
+      <!-- Footer  Section Code End code  -->
+
+      <!-- ======================== -->
+    </div>
+    <script src="
+    https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js
+    "></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/carosel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js">
+
+    </script>
+
+        <!-- for Tab -->
+        <script>
+          AOS.init();
+        </script>
+
+
+
+  </body>
+</html>
